@@ -13,17 +13,6 @@
 					<Value>MainWindow.xbf</Value>
 				</Candidate>
 			</NamedResource>
-			<ResourceMapSubtree name="runtimes">
-				<ResourceMapSubtree name="win-x64">
-					<ResourceMapSubtree name="native">
-						<NamedResource name="WebView2Loader.dll" uri="ms-resource://Slidl/Files/runtimes/win-x64/native/WebView2Loader.dll">
-							<Candidate type="Path">
-								<Value>runtimes\win-x64\native\WebView2Loader.dll</Value>
-							</Candidate>
-						</NamedResource>
-					</ResourceMapSubtree>
-				</ResourceMapSubtree>
-			</ResourceMapSubtree>
 		</ResourceMapSubtree>
 	</ResourceMap>
 </PriInfo>

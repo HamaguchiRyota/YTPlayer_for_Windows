@@ -8,9 +8,10 @@
     ".NETCoreApp,Version=v8.0": {
       "Slidl/1.0.0": {
         "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.2903.40",
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1742",
           "Microsoft.WindowsAppSDK": "1.6.241114003",
-          "Microsoft.Web.WebView2.Core.Projection": "1.0.2651.64",
+          "Microsoft.Web.WebView2.Core.Projection": "1.0.2903.40",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
         "runtime": {
@@ -29,29 +30,29 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.2651.64": {
+      "Microsoft.Web.WebView2/1.0.2903.40": {
         "runtimeTargets": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "1.0.2651.64"
+            "fileVersion": "1.0.2903.40"
           },
           "runtimes/win-x64/native/WebView2Loader.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "1.0.2651.64"
+            "fileVersion": "1.0.2903.40"
           },
           "runtimes/win-x86/native/WebView2Loader.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "1.0.2651.64"
+            "fileVersion": "1.0.2903.40"
           }
         }
       },
       "Microsoft.Windows.SDK.BuildTools/10.0.26100.1742": {},
       "Microsoft.WindowsAppSDK/1.6.241114003": {
         "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.2651.64",
+          "Microsoft.Web.WebView2": "1.0.2903.40",
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.1742"
         },
         "runtime": {
@@ -138,11 +139,11 @@
           }
         }
       },
-      "Microsoft.Web.WebView2.Core.Projection/1.0.2651.64": {
+      "Microsoft.Web.WebView2.Core.Projection/1.0.2903.40": {
         "runtime": {
           "Microsoft.Web.WebView2.Core.Projection.dll": {
-            "assemblyVersion": "1.0.2651.64",
-            "fileVersion": "1.0.2651.64"
+            "assemblyVersion": "1.0.2903.40",
+            "fileVersion": "1.0.2903.40"
           }
         }
       }
@@ -159,12 +160,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Web.WebView2/1.0.2651.64": {
+    "Microsoft.Web.WebView2/1.0.2903.40": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-f5sc/vcAoTCTEW7Nqzp4galAuTRguZViw8ksn+Nx2uskEBPm0/ubzy6gVjvXS/P96jLS89C8T9I0hPc417xpNg==",
-      "path": "microsoft.web.webview2/1.0.2651.64",
-      "hashPath": "microsoft.web.webview2.1.0.2651.64.nupkg.sha512"
+      "sha512": "sha512-THrzYAnJgE3+cNH+9Epr44XjoZoRELdVpXlWGPs6K9C9G6TqyDfVCeVAR/Er8ljLitIUX5gaSkPsy9wRhD1sgQ==",
+      "path": "microsoft.web.webview2/1.0.2903.40",
+      "hashPath": "microsoft.web.webview2.1.0.2903.40.nupkg.sha512"
     },
     "Microsoft.Windows.SDK.BuildTools/10.0.26100.1742": {
       "type": "package",
@@ -180,7 +181,7 @@
       "path": "microsoft.windowsappsdk/1.6.241114003",
       "hashPath": "microsoft.windowsappsdk.1.6.241114003.nupkg.sha512"
     },
-    "Microsoft.Web.WebView2.Core.Projection/1.0.2651.64": {
+    "Microsoft.Web.WebView2.Core.Projection/1.0.2903.40": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

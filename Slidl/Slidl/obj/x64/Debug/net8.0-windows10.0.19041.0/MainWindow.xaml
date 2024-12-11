@@ -7,11 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-
-    <Grid x:ConnectionId='2' x:Name="RootGrid" Width="460" Height="500" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
-        
-        
-        <StackPanel    
+    <Grid x:ConnectionId='2' x:Name="RootGrid" Width="650" Height="520" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
+        <StackPanel
             Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
             BorderBrush="{ThemeResource SurfaceStrokeColorDefaultBrush}"
             AutomationProperties.Name="Potatoes?"
@@ -19,20 +16,24 @@
             Spacing="8"
             Padding="40"
             CornerRadius="4">
-            
-            <!-- Headers are promoted to name -->
+
+            <!--#region  テンプレ --> 
+            <!--
             <TextBox Header="Name" />
-
-            <!-- As are placeholders -->
             <TextBox PlaceholderText="Nickname" />
-
-            <!-- If both are provided, headers are name and placeholders are moved to description -->
             <TextBox Header="Email" PlaceholderText="test@example.com" />
+            -->
+            <!--#endregion-->
+
+
+            <TextBox x:ConnectionId='3' x:Name="myTextBox" Width="500" Height="30" PlaceholderText="URL"/>
+            <Button x:ConnectionId='4' x:Name="myButton" Content="生成" Width="100" Height="30" Margin="0,10,0,0"                       />
+            <WebView2 x:ConnectionId='5' x:Name="myWebView" Width="560" Height="315" Margin="0,10,0,0"/>
+
 
         </StackPanel>
-        
+
+
     </Grid>
-    
-    
 </Window>
 
