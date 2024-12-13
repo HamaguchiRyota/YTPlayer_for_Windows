@@ -12,8 +12,10 @@ namespace Slidl
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class MainWindow : Window, IDisposable
     {
+        private bool disposed = false;
+
         /// <summary>
         /// メインの処理
         /// </summary>
@@ -24,6 +26,17 @@ namespace Slidl
             AppWindow.ResizeClient(new SizeInt32(
                 (int)(RootGrid.Width * dpiScale),
                 (int)(RootGrid.Height * dpiScale)));
+
+            this.Closed += MainWindow_Closed;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void MainWindow_Closed(object sender, WindowEventArgs e)
+        {
+            myButton.Click -= myButton_Click;
+            Dispose();
         }
 
         /// <summary>
@@ -44,8 +57,37 @@ namespace Slidl
             else
             {
                 // Handle invalid URL
-                myTextBox.Text = "Invalid URL";
+                myTextBox.Text = "";
             }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    /// マネージリソースの解放
+                    myButton.Click -= myButton_Click;
+                    this.Closed -= MainWindow_Closed;
+                }
+
+                /// アンマネージリソースの解放
+                /// ここにアンマネージリソースの解放コードを追加
+
+                disposed = true;
+            }
+        }
+
+        ~MainWindow()
+        {
+            Dispose(false);
         }
 
     }
@@ -58,7 +100,7 @@ namespace Slidl
         static readonly Regex YoutubeVideoRegex = new Regex(@"youtu(?:\.be|be\.com)/(?:(.*)v(/|=)|(.*/)?)([a-zA-Z0-9-_]+)", RegexOptions.IgnoreCase);
         static readonly Regex VimeoVideoRegex = new Regex(@"vimeo\.com/(?:.*#|.*/videos/)?([0-9]+)", RegexOptions.IgnoreCase | RegexOptions.Multiline);
 
-        static internal string UrlToEmbedCode(this string url)
+        static internal string? UrlToEmbedCode(this string url)
         {
             if (!string.IsNullOrEmpty(url))
             {
