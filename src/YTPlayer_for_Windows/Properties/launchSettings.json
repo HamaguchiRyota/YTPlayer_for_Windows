@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "YTPlayer_for_Windows (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "YTPlayer_for_Windows (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
